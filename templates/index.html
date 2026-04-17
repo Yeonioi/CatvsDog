@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat vs Dog Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Is it a cat or a dog?</h1>
+            <p class="subtitle">Upload a photo and find out</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Image Display Area -->
+            <div class="image-frame">
+                <div id="imageLabel" class="image-label">
+                    No image loaded<br><br>Click 'Upload Image' to select a file
+                </div>
+                <img id="previewImage" class="preview-image" style="display: none;" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-frame">
+                <button id="uploadBtn" class="btn btn-blue">Upload Image</button>
+                <button id="predictBtn" class="btn btn-green" disabled>Predict</button>
+                <button id="clearBtn" class="btn btn-red">Clear</button>
+            </div>
+
+            <!-- Hidden File Input -->
+            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+            <!-- Result Frame -->
+            <div id="resultFrame" class="result-frame" style="display: none;">
+                <div id="resultLabel" class="result-label">Result will appear here</div>
+                <div id="confidenceLabel" class="confidence-label"></div>
+                <div class="progress-bar">
+                    <div id="confidenceBar" class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <div id="messageLabel" class="message-label"></div>
+            </div>
+        </div>
+
+        <!-- Info Frame -->
+        <div class="info-frame">
+            Pro tip: Works best with clear, well-lit photos of the actual pet. The model sometimes gets confused, and forces a prediction.
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
