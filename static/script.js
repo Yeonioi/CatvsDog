@@ -63,8 +63,19 @@ predictBtn.addEventListener('click', async () => {
             // Display results
             resultLabel.textContent = data.label;
             resultLabel.style.color = data.color;
-            confidenceLabel.textContent = `Confidence: ${data.confidence}%`;
-            confidenceBar.style.width = `${data.confidence}%`;
+            
+            // Only show confidence if it's not null
+            if (data.confidence !== null) {
+                confidenceLabel.textContent = `Confidence: ${data.confidence}%`;
+                confidenceLabel.style.display = 'block';
+                confidenceBar.style.width = `${data.confidence}%`;
+                confidenceBar.style.display = 'block';
+            } else {
+                confidenceLabel.style.display = 'none';
+                confidenceBar.style.display = 'none';
+                confidenceBar.style.width = '0%';
+            }
+            
             messageLabel.textContent = data.message;
             resultFrame.style.display = 'block';
         } else {
