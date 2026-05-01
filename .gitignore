@@ -4,8 +4,10 @@ PetImages/
 
 # Trained models
 models/*.h5
+models/*.keras
 models/*.pkl
 models/*.pth
+models/*.pt
 
 # Python
 __pycache__/
