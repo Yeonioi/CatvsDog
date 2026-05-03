@@ -8,7 +8,7 @@ If you already have a trained model:
 pip install -r requirements.txt
 ```
 
-2. Place model at `models/best_cat_dog_classifier.h5`
+2. Place model at `models/best_model/keras`
 
 3. Run the web app:
 ```bash
@@ -24,7 +24,7 @@ run_web.bat
 pip install -r requirements.txt
 ```
 
-2. Prepare training data in `data/train/cats`, `data/train/dogs`, `data/test/cats`, `data/test/dogs`
+2. Prepare training data in `data/train/cats`, `data/train/dogs`, `data/train/others`, `data/test/cats`, `data/test/dogs`, `data/test/others`
 
 3. Train the model:
 ```bash
