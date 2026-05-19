@@ -3,14 +3,33 @@ Cat vs Dog vs Other Classifier — Flask Web App (3-class)
 """
 
 from flask import Flask, render_template, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
 from PIL import Image, ImageEnhance
 import numpy as np
 from tensorflow import keras
 import os
 import io
+import logging
+from datetime import datetime
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB
+
+# ── Database Config ──────────────────────────────────────────────────────────
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///predictions.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+# ── Logging Config ───────────────────────────────────────────────────────────
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('app.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 # ── Config (must match train.py) ─────────────────────────────────────────────
 IMG_SIZE       = 128
@@ -28,13 +47,32 @@ UNCERTAIN_MARGIN  = 0.15   # top-2 gap below this → "uncertain"
 OTHER_THRESHOLD   = 0.35   # at or below this → default to "other" (no confidence bar)
 TTA_RUNS          = 6      # 1 clean + 5 augmented (batched in one predict call)
 
+# ── Database Model ───────────────────────────────────────────────────────────
+class Prediction(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    filename = db.Column(db.String(255))
+    predicted_class = db.Column(db.String(50))
+    confidence = db.Column(db.Float)
+    all_probs = db.Column(db.JSON)  # Store all class probabilities
+    
+    def __repr__(self):
+        return f'<Prediction {self.predicted_class} {self.confidence}%>'
+
 # ── Load model ───────────────────────────────────────────────────────────────
 model = None
 if os.path.exists(MODEL_PATH):
     model = keras.models.load_model(MODEL_PATH)
     print(f"Model loaded from {MODEL_PATH}")
+    logger.info(f"Model loaded from {MODEL_PATH}")
 else:
     print(f"Model not found at '{MODEL_PATH}'. Run train.py first.")
+    logger.warning(f"Model not found at '{MODEL_PATH}'. Run train.py first.")
+
+# Create database tables on first run
+with app.app_context():
+    db.create_all()
+    logger.info("Database tables initialized")
 
 
 # ── Preprocessing ─────────────────────────────────────────────────────────────
@@ -111,6 +149,7 @@ def make_other_response():
 # ── Routes ────────────────────────────────────────────────────────────────────
 @app.route('/')
 def index():
+    logger.info("Index page accessed")
     return render_template('index.html')
 
 
@@ -218,6 +257,19 @@ def predict():
             for i in range(len(CLASS_NAMES))
         }
 
+        # Save prediction to database
+        prediction = Prediction(
+            filename=file.filename,
+            predicted_class=result['label'],
+            confidence=result['confidence'],
+            all_probs=all_probs
+        )
+        db.session.add(prediction)
+        db.session.commit()
+        
+        # Log prediction
+        logger.info(f"Prediction saved: {file.filename} → {result['label']} (confidence: {result['confidence']}%)")
+
         return jsonify({
             'success':    True,
             'label':      result['label'],
@@ -228,8 +280,63 @@ def predict():
         })
 
     except Exception as e:
+        logger.error(f"Prediction error: {str(e)}")
+        logger.error(f"Prediction error: {str(e)}")
         return jsonify({'error': f'Server error: {str(e)}', 'success': False}), 500
 
 
+# ── History & Stats Endpoints ────────────────────────────────────────────────
+@app.route('/history')
+def history():
+    """View recent predictions (JSON)"""
+    try:
+        predictions = Prediction.query.order_by(Prediction.timestamp.desc()).limit(50).all()
+        logger.info(f"Retrieved {len(predictions)} predictions from history")
+        return jsonify([{
+            'id': p.id,
+            'timestamp': p.timestamp.isoformat(),
+            'filename': p.filename,
+            'class': p.predicted_class,
+            'confidence': p.confidence,
+            'all_probs': p.all_probs
+        } for p in predictions])
+    except Exception as e:
+        logger.error(f"History retrieval error: {str(e)}")
+        return jsonify({'error': f'Failed to retrieve history: {str(e)}', 'success': False}), 500
+
+
+@app.route('/stats')
+def stats():
+    """Get classification statistics"""
+    try:
+        stats_dict = {}
+        for class_name in CLASS_NAMES:
+            count = Prediction.query.filter_by(predicted_class=class_name).count()
+            stats_dict[class_name] = count
+        
+        total = sum(stats_dict.values())
+        stats_dict['total'] = total
+        logger.info(f"Stats retrieved: {stats_dict}")
+        return jsonify(stats_dict)
+    except Exception as e:
+        logger.error(f"Stats retrieval error: {str(e)}")
+        return jsonify({'error': f'Failed to retrieve stats: {str(e)}', 'success': False}), 500
+
+
+@app.route('/logs')
+def get_logs():
+    """Get recent prediction results from database"""
+    try:
+        predictions = Prediction.query.order_by(Prediction.timestamp.desc()).limit(50).all()
+        logs = []
+        for p in predictions:
+            log_entry = f"{p.timestamp.strftime('%Y-%m-%d %H:%M:%S')} - {p.filename} → {p.predicted_class} ({p.confidence}%)"
+            logs.append(log_entry)
+        return jsonify({'logs': logs})
+    except Exception as e:
+        return jsonify({'logs': []})  # Return empty logs on error
+
+
 if __name__ == '__main__':
+    logger.info("Starting Flask app on port 5000")
     app.run(debug=True, port=5000)

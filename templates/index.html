@@ -49,6 +49,37 @@
         <div class="info-frame">
             Pro tip: Works best with clear, well-lit photos of the actual pet. The model sometimes gets confused, and forces a prediction.
         </div>
+
+        <!-- Logs Panel -->
+        <div class="logs-panel">
+            <div class="logs-header">
+                <h3>� Prediction Results</h3>
+                <button id="toggleLogsBtn" class="btn btn-small">Hide</button>
+            </div>
+            <div id="logsContainer" class="logs-container">
+                <div class="logs-loading">Loading prediction results...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Prompt -->
+    <div id="conditionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>✨ Best Conditions for Accurate Predictions</h2>
+            <div class="modal-body">
+                <ul>
+                    <li><strong>Clear & Well-Lit Photos:</strong> Use natural or good artificial lighting to ensure the subject is clearly visible</li>
+                    <li><strong>Actual Pets:</strong> The model works best with clear images of real cats and dogs</li>
+                    <li><strong>High Quality Images:</strong> Use JPG or PNG formats. Avoid heavily compressed or pixelated images</li>
+                    <li><strong>Good View:</strong> Front-facing or clear side views of the animal work best</li>
+                    <li><strong>Avoid Blur:</strong> Use sharp, focused images. Blurry photos reduce accuracy</li>
+                    <li><strong>Single Subject:</strong> Images with one clear cat or dog perform better than crowded scenes</li>
+                </ul>
+                <p style="margin-top: 15px; font-style: italic; color: #666;">Note: The model sometimes struggles and may force a prediction even on ambiguous images.</p>
+            </div>
+            <button id="closeModalBtn" class="btn btn-blue" style="width: 100%; margin-top: 15px;">Got it!</button>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
