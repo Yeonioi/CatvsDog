@@ -1,0 +1,182 @@
+2026-05-19 17:24:03,581 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:24:03,990 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:24:04,071 - __main__ - INFO - Database tables initialized
+2026-05-19 17:24:04,072 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:24:04,115 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-19 17:24:04,116 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-05-19 17:24:04,122 - werkzeug - INFO -  * Restarting with stat
+2026-05-19 17:24:07,658 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:24:07,921 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:24:07,923 - __main__ - INFO - Database tables initialized
+2026-05-19 17:24:07,924 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:24:07,929 - werkzeug - WARNING -  * Debugger is active!
+2026-05-19 17:24:07,933 - werkzeug - INFO -  * Debugger PIN: 136-647-496
+2026-05-19 17:26:49,415 - __main__ - INFO - Index page accessed
+2026-05-19 17:26:49,427 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:26:49] "GET / HTTP/1.1" 200 -
+2026-05-19 17:26:49,534 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:26:49] "GET /static/style.css HTTP/1.1" 200 -
+2026-05-19 17:26:49,673 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:26:49] "GET /static/script.js HTTP/1.1" 200 -
+2026-05-19 17:26:49,987 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:26:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-19 17:27:05,092 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:27:05] "POST /predict HTTP/1.1" 200 -
+2026-05-19 17:29:16,730 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:29:16,993 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:29:16,994 - __main__ - INFO - Database tables initialized
+2026-05-19 17:29:16,996 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:29:17,007 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-19 17:29:17,007 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-05-19 17:29:17,008 - werkzeug - INFO -  * Restarting with stat
+2026-05-19 17:29:20,588 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:29:20,853 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:29:20,855 - __main__ - INFO - Database tables initialized
+2026-05-19 17:29:20,856 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:29:20,861 - werkzeug - WARNING -  * Debugger is active!
+2026-05-19 17:29:20,866 - werkzeug - INFO -  * Debugger PIN: 136-647-496
+2026-05-19 17:29:21,822 - __main__ - INFO - Index page accessed
+2026-05-19 17:29:21,833 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:21] "GET / HTTP/1.1" 200 -
+2026-05-19 17:29:21,979 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:21] "GET /static/style.css HTTP/1.1" 200 -
+2026-05-19 17:29:21,984 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:21] "GET /static/script.js HTTP/1.1" 200 -
+2026-05-19 17:29:22,306 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:22] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:23,999 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:23] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:26,312 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:26] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:28,013 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:28] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:30,318 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:30] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:32,002 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:32] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:34,312 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:34] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:36,000 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:36] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:38,314 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:38] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:40,226 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:40] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:42,524 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:42] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:44,214 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:44] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:46,519 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:46] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:48,215 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:48] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:50,520 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:50] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:52,222 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:52] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:54,521 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:54] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:56,157 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:56] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:29:58,309 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:29:58] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:00,214 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:00] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:02,519 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:02] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:04,220 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:04] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:06,511 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:06] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:08,214 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:08] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:09,459 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\htdocs\\CatvsDog\\app.py', reloading
+2026-05-19 17:30:09,884 - werkzeug - INFO -  * Restarting with stat
+2026-05-19 17:30:13,712 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:30:14,004 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:30:14,006 - __main__ - INFO - Database tables initialized
+2026-05-19 17:30:14,008 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:30:14,013 - werkzeug - WARNING -  * Debugger is active!
+2026-05-19 17:30:14,017 - werkzeug - INFO -  * Debugger PIN: 136-647-496
+2026-05-19 17:30:14,991 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:14] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:15,002 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:15] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:15,305 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:15] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:16,530 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:16] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:17,393 - __main__ - INFO - Index page accessed
+2026-05-19 17:30:17,407 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:17] "GET / HTTP/1.1" 200 -
+2026-05-19 17:30:17,788 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-05-19 17:30:17,820 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:17] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-05-19 17:30:18,139 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:18] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:19,837 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:19] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:22,136 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:22] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:22,383 - __main__ - INFO - Index page accessed
+2026-05-19 17:30:22,384 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:22] "GET / HTTP/1.1" 200 -
+2026-05-19 17:30:22,628 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:22] "GET /static/style.css HTTP/1.1" 200 -
+2026-05-19 17:30:22,706 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:22] "GET /static/script.js HTTP/1.1" 200 -
+2026-05-19 17:30:22,720 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:22] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:23,013 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-19 17:30:25,041 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:25] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:41,036 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:30:41,299 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:30:41,300 - __main__ - INFO - Database tables initialized
+2026-05-19 17:30:41,302 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:30:41,312 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-19 17:30:41,313 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-05-19 17:30:41,314 - werkzeug - INFO -  * Restarting with stat
+2026-05-19 17:30:44,799 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:30:45,076 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:30:45,077 - __main__ - INFO - Database tables initialized
+2026-05-19 17:30:45,079 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:30:45,084 - werkzeug - WARNING -  * Debugger is active!
+2026-05-19 17:30:45,088 - werkzeug - INFO -  * Debugger PIN: 136-647-496
+2026-05-19 17:30:46,031 - __main__ - INFO - Index page accessed
+2026-05-19 17:30:46,034 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:46] "GET / HTTP/1.1" 200 -
+2026-05-19 17:30:46,040 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:46] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:46,448 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-05-19 17:30:46,469 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-05-19 17:30:46,484 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:46] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:48,791 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:48] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:50,487 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:50] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:52,498 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:52] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:53,115 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:53] "POST /predict HTTP/1.1" 200 -
+2026-05-19 17:30:53,433 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:53] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:54,495 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:54] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:56,804 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:56] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:58,487 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:58] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:30:59,753 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:59] "POST /predict HTTP/1.1" 200 -
+2026-05-19 17:30:59,831 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:30:59] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:00,483 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:00] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:02,798 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:02] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:04,486 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:04] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:06,805 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:06] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:08,484 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:08] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:11,521 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:11] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:13,226 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:13] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:15,520 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:15] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:17,215 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:17] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:19,512 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:19] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:21,221 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:21] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:23,521 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:23] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:25,221 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:25] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:27,521 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:27] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:29,216 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:29] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:31,521 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:31] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:33,216 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:33] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:35,521 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:35] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:37,216 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:37] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:38,147 - werkzeug - INFO -  * Detected change in 'D:\\Coding\\htdocs\\CatvsDog\\app.py', reloading
+2026-05-19 17:31:38,576 - werkzeug - INFO -  * Restarting with stat
+2026-05-19 17:31:42,396 - tensorflow - WARNING - TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+2026-05-19 17:31:42,692 - __main__ - INFO - Model loaded from models\best_model.keras
+2026-05-19 17:31:42,694 - __main__ - INFO - Database tables initialized
+2026-05-19 17:31:42,696 - __main__ - INFO - Starting Flask app on port 5000
+2026-05-19 17:31:42,701 - werkzeug - WARNING -  * Debugger is active!
+2026-05-19 17:31:42,705 - werkzeug - INFO -  * Debugger PIN: 136-647-496
+2026-05-19 17:31:43,648 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:43] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:43,650 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:43] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:43,962 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:43] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:45,515 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:45] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:46,812 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:46] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:47,845 - __main__ - INFO - Index page accessed
+2026-05-19 17:31:47,847 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:47] "GET / HTTP/1.1" 200 -
+2026-05-19 17:31:47,937 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-05-19 17:31:48,094 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:48] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-05-19 17:31:48,401 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:48] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:50,099 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:50] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:52,407 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:52] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:54,098 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:54] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:56,420 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:56] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:31:58,100 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:31:58] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:00,407 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:00] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:01,070 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:01] "POST /predict HTTP/1.1" 200 -
+2026-05-19 17:32:01,073 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:01] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:02,411 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:02] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:04,101 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:04] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:06,405 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:06] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:08,113 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:08] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:10,421 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:10] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:12,437 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:12] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:12,818 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:12] "POST /predict HTTP/1.1" 200 -
+2026-05-19 17:32:13,124 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:13] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:14,100 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:14] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:16,414 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:16] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:18,102 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:18] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:20,422 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:20] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:22,100 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:22] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:24,426 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:24] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:26,107 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:26] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:28,407 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:28] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:30,099 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:30] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:32,410 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:32] "GET /logs HTTP/1.1" 200 -
+2026-05-19 17:32:34,108 - werkzeug - INFO - 127.0.0.1 - - [19/May/2026 17:32:34] "GET /logs HTTP/1.1" 200 -

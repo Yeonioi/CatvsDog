@@ -10,8 +10,84 @@ const resultLabel = document.getElementById('resultLabel');
 const confidenceLabel = document.getElementById('confidenceLabel');
 const confidenceBar = document.getElementById('confidenceBar');
 const messageLabel = document.getElementById('messageLabel');
+const logsContainer = document.getElementById('logsContainer');
+const toggleLogsBtn = document.getElementById('toggleLogsBtn');
 
 let currentImage = null;
+let logsVisible = true;
+
+// Fetch and display logs
+async function updateLogs() {
+    try {
+        const response = await fetch('/logs');
+        const data = await response.json();
+        
+        if (data.logs && data.logs.length > 0) {
+            let html = '';
+            data.logs.forEach(log => {
+                let className = 'logs-entry';
+                if (log.includes('ERROR')) {
+                    className += ' logs-entry-error';
+                } else if (log.includes('WARNING')) {
+                    className += ' logs-entry-warning';
+                } else if (log.includes('INFO')) {
+                    className += ' logs-entry-info';
+                }
+                html += `<div class="${className}">${escapeHtml(log)}</div>`;
+            });
+            logsContainer.innerHTML = html;
+            // Auto-scroll to bottom
+            logsContainer.scrollTop = logsContainer.scrollHeight;
+        } else {
+            logsContainer.innerHTML = '<div class="logs-loading">No logs yet</div>';
+        }
+    } catch (error) {
+        logsContainer.innerHTML = `<div class="logs-loading">Error loading logs: ${error.message}</div>`;
+    }
+}
+
+// Escape HTML to prevent injection
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Toggle logs visibility
+toggleLogsBtn.addEventListener('click', () => {
+    logsVisible = !logsVisible;
+    logsContainer.style.display = logsVisible ? 'block' : 'none';
+    toggleLogsBtn.textContent = logsVisible ? 'Hide' : 'Show';
+});
+
+// Show conditions modal on page load
+window.addEventListener('load', () => {
+    const conditionsModal = document.getElementById('conditionsModal');
+    const closeBtn = document.querySelector('.close-btn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Show modal
+    conditionsModal.style.display = 'flex';
+
+    // Close modal functions
+    const closeModal = () => {
+        conditionsModal.style.display = 'none';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === conditionsModal) {
+            closeModal();
+        }
+    });
+
+    // Load logs initially and set auto-refresh
+    updateLogs();
+    setInterval(updateLogs, 2000); // Refresh logs every 2 seconds
+});
 
 // Upload button click
 uploadBtn.addEventListener('click', () => {
@@ -78,6 +154,9 @@ predictBtn.addEventListener('click', async () => {
             
             messageLabel.textContent = data.message;
             resultFrame.style.display = 'block';
+            
+            // Update logs after prediction
+            updateLogs();
         } else {
             alert('Error: ' + data.error);
         }
